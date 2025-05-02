@@ -17,38 +17,38 @@
     }
 
      .profile-card {
-    position: relative;
-    background-image: url("banner.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-    padding: 25px 30px;
-    display: flex;
-    gap: 20px;
-    width: 560px;
-    color: #fff;
-    z-index: 1;
-    overflow: hidden; /* required for overlay containment */
-  }
+        position: relative;
+        background-image: url("banner.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 12px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+        padding: 25px 30px;
+        display: flex;
+        gap: 20px;
+        width: 560px;
+        color: #fff;
+        z-index: 1;
+        overflow: hidden; /* required for overlay containment */
+      }
 
-  .profile-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* darkness level */
-    z-index: 0;
-    border-radius: 12px; /* match the card's rounded corners */
-  }
+      .profile-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* darkness level */
+        z-index: 0;
+        border-radius: 12px; /* match the card's rounded corners */
+      }
 
-  .profile-card > * {
-    position: relative;
-    z-index: 1;
-  }
+      .profile-card > * {
+        position: relative;
+        z-index: 1;
+      }
 
 
 
