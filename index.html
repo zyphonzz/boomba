@@ -33,22 +33,33 @@
         width: 560px;
         color: #fff;
         z-index: 1;
-        overflow: hidden; /* required for overlay containment */
+        overflow: hidden;
       }
 
       .profile-card::before {
         content: "";
         position: absolute;
         inset: 0;
-        background-color: rgba(0, 0, 0, 0.4); /* darkness level */
+        background-color: rgba(0, 0, 0, 0.4);
         z-index: 0;
-        border-radius: 12px; /* match the card's rounded corners */
+        border-radius: 12px;
       }
 
       .profile-card > * {
         position: relative;
         z-index: 1;
       }
+
+      #pong {
+        display: block;
+        margin-top: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 4px;
+        image-rendering: pixelated;
+        box-shadow: 0 0 10px lime;
+      }
+
 
 
 
@@ -156,34 +167,23 @@ let paddleHeight = 50, paddleWidth = 10;
 let playerY = canvas.height / 2 - paddleHeight / 2;
 let aiY = canvas.height / 2 - paddleHeight / 2;
 let ballX = canvas.width / 2, ballY = canvas.height / 2;
-let ballVX = 4, ballVY = 4;
+let ballVX = 2, ballVY = 2;
 
 function draw() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
     ctx.fillStyle = "white";
     ctx.fillRect(0, playerY, paddleWidth, paddleHeight);
     ctx.fillRect(canvas.width - paddleWidth, aiY, paddleWidth, paddleHeight);
-
     ctx.beginPath();
     ctx.arc(ballX, ballY, 6, 0, Math.PI * 2);
     ctx.fill();
-
-    // Move ball
     ballX += ballVX;
     ballY += ballVY;
-
     if (ballY <= 0 || ballY >= canvas.height) ballVY *= -1;
-
-    // Paddle collisions
     if (ballX <= paddleWidth && ballY >= playerY && ballY <= playerY + paddleHeight) ballVX *= -1;
     if (ballX >= canvas.width - paddleWidth && ballY >= aiY && ballY <= aiY + paddleHeight) ballVX *= -1;
-
-    // AI movement
     aiY += (ballY - (aiY + paddleHeight / 2)) * 0.05;
-
-    // Reset if missed
     if (ballX < 0 || ballX > canvas.width) {
         ballX = canvas.width / 2;
         ballY = canvas.height / 2;
