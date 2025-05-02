@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>zyphonz Profile</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #2c3e50, #6c7a89);
+      font-family: "Trebuchet MS", sans-serif;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .profile-card {
+      background: linear-gradient(145deg, #4e5d6c, #2f3b47);
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      width: 500px;
+      display: flex;
+      gap: 20px;
+      border: 1px solid #7f9db8;
+    }
+
+    .avatar-frame {
+      background: linear-gradient(145deg, #d3d9df, #a9b1b9);
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+      padding: 8px;
+      width: 96px;
+      height: 96px;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar-frame img {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .name {
+      font-size: 26px;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px #000;
+      margin-bottom: 5px;
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 14px;
+      color: #d0d0d0;
+      text-shadow: 0 0 2px #000;
+      margin-bottom: 15px;
+    }
+
+    .links {
+      margin-top: 10px;
+    }
+
+    .links b {
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    .links a {
+      display: block;
+      color: #78d4ff;
+      text-decoration: none;
+      text-shadow: 0 0 6px #00caff;
+      margin-top: 4px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="avatar-frame">
+      <img src="your-icon.png" alt="avatar">
+    </div>
+    <div class="profile-info">
+      <div class="name">zyphonz ♂</div>
+      <div class="quote">"quite insuferable certified indoor fan user"</div>
+      <div class="links">
+        <b>Links:</b>
+        <a href="#">example.dev</a>
+        <a href="#">example.com</a>
+        <a href="#">example.net</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
