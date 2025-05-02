@@ -7,9 +7,9 @@
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1b2a36, #2e4a64);
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: #e0e0e0;
+      background: linear-gradient(135deg, #5c6f7c, #dce7f3);
+      font-family: "Segoe UI", sans-serif;
+      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,92 +18,91 @@
     }
 
     .profile-card {
-      background: rgba(40, 60, 80, 0.65);
-      backdrop-filter: blur(20px);
-      border-radius: 18px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255,255,255,0.2);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 25px;
-      width: 540px;
+      background: transparent;
       display: flex;
-      gap: 20px;
-      transition: all 0.3s ease;
+      gap: 24px;
+      align-items: center;
+      padding: 40px;
+      box-shadow: 0 0 60px rgba(0,0,0,0.2);
     }
 
     .avatar-frame {
-      width: 128px;
-      height: 128px;
-      flex-shrink: 0;
+      width: 100px;
+      height: 100px;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #edf6ff, #9ab6cb);
+      box-shadow:
+        inset 0 0 10px rgba(255, 255, 255, 0.7),
+        0 0 8px rgba(0, 140, 255, 0.5);
+      border: 1px solid #9cc0e1;
       display: flex;
-      justify-content: center;
       align-items: center;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
+      justify-content: center;
     }
 
     .avatar-frame img {
-      width: 100%;
-      height: 100%;
-      border-radius: 18px;
+      width: 80%;
+      height: 80%;
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+      border-radius: 10px;
     }
 
     .profile-info {
-      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
     .name {
-      font-size: 28px;
+      font-size: 30px;
+      font-weight: 300;
       color: #ffffff;
-      text-shadow: 1px 1px 2px #000;
-      margin-bottom: 6px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .name .symbol {
+      font-size: 16px;
+      vertical-align: super;
+      margin-left: 4px;
+      color: #6cb5ff;
     }
 
     .quote {
-      font-style: italic;
       font-size: 14px;
-      color: #d8e6ff;
-      text-shadow: 0 0 3px #203040;
-      margin-bottom: 16px;
+      font-style: italic;
+      color: #000000aa;
+      margin: 6px 0 14px;
     }
 
     .links b {
-      color: #ffffff;
-      font-size: 15px;
-      text-shadow: 0 0 3px #ffffff30;
+      font-size: 16px;
+      color: #000;
     }
 
-    .links a {
+    .links a,
+    .links button {
       display: block;
-      color: #a3d5ff;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 6px 10px;
-      margin-top: 6px;
-      border-radius: 10px;
+      color: #1976d2;
+      font-size: 14px;
       text-decoration: none;
-      box-shadow: inset 0 0 4px rgba(255,255,255,0.1);
-      text-shadow: 0 0 4px #00caff90;
-      transition: all 0.2s ease;
+      margin-top: 3px;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
       cursor: pointer;
     }
 
-    .links a:hover {
-      background: rgba(163, 213, 255, 0.15);
-      box-shadow: 0 0 8px #00caff60;
-      text-decoration: none;
+    .links a:hover,
+    .links button:hover {
+      text-decoration: underline;
     }
-
   </style>
   <script>
     function copyDiscordUsername() {
       const username = "cronkle_v1";
       navigator.clipboard.writeText(username).then(() => {
         alert("Copied Discord username to clipboard: " + username);
-      }).catch(err => {
-        alert("Failed to copy: " + err);
       });
     }
   </script>
@@ -114,14 +113,16 @@
       <img src="pfp.png" alt="avatar">
     </div>
     <div class="profile-info">
-      <div class="name">zyphonz ♂</div>
-      <div class="quote">"quite insuferable certified indoor fan user"</div>
+      <div class="name">
+        zyphonz <span class="symbol">♂</span>
+      </div>
+      <div class="quote">“quite insuferable<br>certified indoor fan user”</div>
       <div class="links">
-        <b>Socials:</b>
+        <b>Links:</b>
         <a href="https://www.youtube.com/@zypyyhhonz">YouTube</a>
         <a href="https://www.roblox.com/users/8193748842/profile">ROBLOX</a>
         <a href="https://austiblox.net/user/zyphonz">Austiblox</a>
-        <a onclick="copyDiscordUsername()">Discord</a>
+        <button onclick="copyDiscordUsername()">Discord: cronkle_v1</button>
       </div>
     </div>
   </div>
