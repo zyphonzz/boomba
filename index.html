@@ -7,25 +7,27 @@
     body {
       margin: 0;
       padding: 0;
-      background: radial-gradient(ellipse at center, #2c3e50 0%, #1a242f 100%);
-      font-family: "Trebuchet MS", sans-serif;
+      background: linear-gradient(135deg, #1b2a36, #2e4a64);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: #e0e0e0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      background-attachment: fixed;
     }
 
     .profile-card {
-      background: rgba(30, 40, 50, 0.7);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      background: rgba(40, 60, 80, 0.65);
+      backdrop-filter: blur(20px);
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       padding: 25px;
-      width: 520px;
+      width: 540px;
       display: flex;
       gap: 20px;
-      border: 1px solid #7f9db8;
+      transition: all 0.3s ease;
     }
 
     .avatar-frame {
@@ -35,12 +37,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
     }
 
     .avatar-frame img {
       width: 100%;
       height: 100%;
-      border-radius: 16px;
+      border-radius: 18px;
     }
 
     .profile-info {
@@ -51,37 +55,47 @@
     }
 
     .name {
-      font-size: 26px;
+      font-size: 28px;
       color: #ffffff;
-      text-shadow: 1px 1px 3px #000;
-      margin-bottom: 5px;
+      text-shadow: 1px 1px 2px #000;
+      margin-bottom: 6px;
     }
 
     .quote {
       font-style: italic;
       font-size: 14px;
-      color: #d0d0d0;
-      text-shadow: 0 0 2px #000;
-      margin-bottom: 15px;
+      color: #d8e6ff;
+      text-shadow: 0 0 3px #203040;
+      margin-bottom: 16px;
     }
 
     .links b {
       color: #ffffff;
       font-size: 15px;
+      text-shadow: 0 0 3px #ffffff30;
     }
 
     .links a {
       display: block;
-      color: #78d4ff;
+      color: #a3d5ff;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px 10px;
+      margin-top: 6px;
+      border-radius: 10px;
       text-decoration: none;
-      text-shadow: 0 0 6px #00caff;
-      margin-top: 4px;
+      box-shadow: inset 0 0 4px rgba(255,255,255,0.1);
+      text-shadow: 0 0 4px #00caff90;
+      transition: all 0.2s ease;
       cursor: pointer;
     }
 
     .links a:hover {
-      text-decoration: underline;
+      background: rgba(163, 213, 255, 0.15);
+      box-shadow: 0 0 8px #00caff60;
+      text-decoration: none;
     }
+
   </style>
   <script>
     function copyDiscordUsername() {
