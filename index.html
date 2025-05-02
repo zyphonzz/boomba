@@ -17,7 +17,7 @@
     }
 
     .profile-card {
-      background: rgba(30, 40, 50, 0.7); /* transparent background */
+      background: rgba(30, 40, 50, 0.7);
       backdrop-filter: blur(10px);
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
@@ -76,12 +76,23 @@
       text-decoration: none;
       text-shadow: 0 0 6px #00caff;
       margin-top: 4px;
+      cursor: pointer;
     }
 
     .links a:hover {
       text-decoration: underline;
     }
   </style>
+  <script>
+    function copyDiscordUsername() {
+      const username = "cronkle_v1";
+      navigator.clipboard.writeText(username).then(() => {
+        alert("Copied Discord username to clipboard: " + username);
+      }).catch(err => {
+        alert("Failed to copy: " + err);
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="profile-card">
@@ -93,9 +104,10 @@
       <div class="quote">"quite insuferable certified indoor fan user"</div>
       <div class="links">
         <b>Socials:</b>
-        <a href="#">https://www.youtube.com/@zypyyhhonz</a>
-        <a href="#">https://www.roblox.com/users/8193748842/profile</a>
-        <div>@cronkle_v1 on discord</div>
+        <a href="https://www.youtube.com/@zypyyhhonz">YouTube</a>
+        <a href="https://www.roblox.com/users/8193748842/profile">ROBLOX</a>
+        <a href="https://austiblox.net/user/zyphonz">Austiblox</a>
+        <a onclick="copyDiscordUsername()">Discord</a>
       </div>
     </div>
   </div>
