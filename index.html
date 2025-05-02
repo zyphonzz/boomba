@@ -8,45 +8,58 @@
       margin: 0;
       padding: 0;
       height: 100vh;
+      background: radial-gradient(circle at center, #4e687a 0%, #1c252f 100%);
+      font-family: "Segoe UI", Tahoma, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: radial-gradient(circle at center, #d3dce6 0%, #6c7b8a 100%);
-      font-family: "Segoe UI", sans-serif;
+      overflow: hidden;
     }
 
     .profile-card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      padding: 25px 30px;
       display: flex;
       gap: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-      border-radius: 20px;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
-      padding: 40px;
-      width: 420px;
-      transition: all 0.3s ease;
+      width: 560px;
+      color: #fff;
+    }
+
+    /* Vista-style gloss effect */
+    .gloss {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 60%);
+      pointer-events: none;
     }
 
     .avatar-frame {
-      flex-shrink: 0;
-      width: 112px;
-      height: 112px;
-      border-radius: 16px;
-      overflow: hidden;
+      width: 96px;
+      height: 96px;
+      padding: 6px;
+      border-radius: 12px;
+      background: linear-gradient(to bottom right, #a9cde8, #6491c7);
+      box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.4);
       display: flex;
       justify-content: center;
       align-items: center;
-      background: transparent;
-      box-shadow:
-        0 0 6px rgba(255, 255, 255, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.25);
+      flex-shrink: 0;
     }
 
     .avatar-frame img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      image-rendering: auto;
+      border-radius: 8px;
     }
 
     .profile-info {
@@ -56,75 +69,71 @@
     }
 
     .name {
-      font-size: 24px;
-      color: #ffffff;
-      font-weight: 300;
-      text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
-    }
-
-    .symbol {
-      font-size: 14px;
-      vertical-align: super;
-      margin-left: 4px;
-      color: #9cd2ff;
+      font-size: 26px;
+      font-weight: 600;
+      color: #e9f6ff;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+      margin-bottom: 5px;
     }
 
     .quote {
-      font-size: 13px;
       font-style: italic;
-      margin: 5px 0 12px;
-      color: #222;
+      font-size: 13.5px;
+      color: #ccd7e3;
+      margin-bottom: 12px;
     }
 
     .links b {
+      color: #e8f1ff;
       font-size: 15px;
-      color: #000;
     }
 
-    .links a,
-    .links button {
+    .links a, .discord-btn {
       display: block;
-      margin-top: 4px;
-      color: #236ebc;
-      font-size: 14px;
+      color: #78b7ff;
       text-decoration: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-family: inherit;
-      padding: 0;
+      margin-top: 4px;
+      font-size: 14px;
     }
 
-    .links a:hover,
-    .links button:hover {
+    .links a:hover, .discord-btn:hover {
       text-decoration: underline;
     }
-  </style>
-  <script>
-    function copyDiscordUsername() {
-      const username = "cronkle_v1";
-      navigator.clipboard.writeText(username).then(() => {
-        alert("Copied Discord username to clipboard: " + username);
-      });
+
+    .discord-btn {
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      font-family: inherit;
     }
-  </script>
+  </style>
 </head>
 <body>
   <div class="profile-card">
+    <div class="gloss"></div>
     <div class="avatar-frame">
-      <img src="pfp.png" alt="avatar">
+      <img src="pfp.png" alt="avatar" />
     </div>
     <div class="profile-info">
-      <div class="name">zyphonz <span class="symbol">♂</span></div>
+      <div class="name">zyphonz <span style="color:#79bff9;">♂</span></div>
       <div class="quote">"quite insuferable<br>certified indoor fan user"</div>
       <div class="links">
         <b>Links:</b>
         <a href="https://www.youtube.com/@zypyyhhonz">YouTube</a>
         <a href="https://www.roblox.com/users/8193748842/profile">ROBLOX</a>
         <a href="https://austiblox.net/user/zyphonz">Austiblox</a>
-        <button onclick="copyDiscordUsername()">Discord: cronkle_v1</button>
+        <button class="discord-btn" onclick="copyDiscord()">Discord: cronkle_v1</button>
       </div>
     </div>
   </div>
+
+  <script>
+    function copyDiscord() {
+      navigator.clipboard.writeText('cronkle_v1').then(() => {
+        alert('Discord username copied to clipboard!');
+      });
+    }
+  </script>
 </body>
 </html>
