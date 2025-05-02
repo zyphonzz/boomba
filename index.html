@@ -183,7 +183,9 @@ function draw() {
     if (ballY <= 0 || ballY >= canvas.height) ballVY *= -1;
     if (ballX <= paddleWidth && ballY >= playerY && ballY <= playerY + paddleHeight) ballVX *= -1;
     if (ballX >= canvas.width - paddleWidth && ballY >= aiY && ballY <= aiY + paddleHeight) ballVX *= -1;
-    aiY += (ballY - (aiY + paddleHeight / 2)) * 0.05;
+    let difficulty = 0.09; // increase from 0.05 to 0.09 (or higher)
+    aiY += (ballY - (aiY + paddleHeight / 2)) * difficulty;
+    
     if (ballX < 0 || ballX > canvas.width) {
         ballX = canvas.width / 2;
         ballY = canvas.height / 2;
