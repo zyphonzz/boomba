@@ -42,6 +42,22 @@
       overflow: hidden;
     }
 
+    .window-controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 82px; /* Width of control.png */
+      height: 16px; /* Height of control.png */
+      z-index: 2;
+    }
+    
+    .window-controls img {
+      width: 100%;
+      height: auto;
+      image-rendering: pixelated; /* Helps keep the retro crispness */
+    }
+
+
     .profile-card::before {
       content: "";
       position: absolute;
@@ -181,6 +197,9 @@
 <body>
   <div class="profile-card">
     <div class="gloss"></div>
+    <div class="window-controls">
+        <img src="control.png" alt="window controls">
+    </div>
 
     <div class="profile-content">
       <div class="avatar-frame">
