@@ -44,18 +44,20 @@
 
     .window-controls {
       position: absolute;
-      top: 10px;
-      right: 10px;
-      width: 82px; /* Width of control.png */
-      height: 16px; /* Height of control.png */
+      top: 12px;  /* a bit of padding */
+      right: 12px;
+      width: 82px;
+      height: 16px;
       z-index: 2;
+      pointer-events: none; /* optional: makes it unclickable */
     }
-    
+
     .window-controls img {
       width: 100%;
       height: auto;
-      image-rendering: pixelated; /* Helps keep the retro crispness */
+      image-rendering: pixelated;
     }
+
 
 
     .profile-card::before {
