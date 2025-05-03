@@ -19,6 +19,18 @@
       overflow: hidden;
     }
 
+    .window-controls {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+
+    .window-controls img {
+      height: 32px;
+    }
+
+
     .profile-card {
       position: relative;
       background-color: #2690a6
@@ -179,6 +191,9 @@
   </style>
 </head>
 <body>
+  <div class="window-controls">
+      <img src="control.png" alt="window controls" />
+  </div>
   <div class="profile-card">
     <div class="gloss"></div>
 
