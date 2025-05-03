@@ -19,17 +19,6 @@
       overflow: hidden;
     }
 
-    .window-controls {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      z-index: 999;
-    }
-
-    .window-controls img {
-      height: 32px;
-    }
-
 
     .profile-card {
       position: relative;
@@ -56,14 +45,16 @@
 
     .window-controls {
       position: absolute;
-      top: 8px;
-      right: 8px;
-      z-index: 2; /* stays above gloss, etc */
+      top: 6px;
+      right: 6px;
+      z-index: 10; /* above gloss + content */
+      pointer-events: auto;
     }
-    
+
     .window-controls img {
       height: 32px;
       image-rendering: pixelated;
+      user-select: none;
     }
 
     .profile-card::before {
@@ -204,10 +195,10 @@
 </head>
 <body
   <div class="profile-card">
-    <div class="gloss"></div>
     <div class="window-controls">
       <img src="control.png" alt="window controls" />
     </div>
+    <div class="gloss"></div>
     <div class="profile-content">
       <div class="avatar-frame">
         <img src="pfp.png" alt="avatar" />
