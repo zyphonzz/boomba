@@ -21,7 +21,7 @@
 
     .profile-card {
       position: relative;
-      background-color: #2690a6
+      background-color: #2690a6;
       background-image: url("banner.png");
       background-size: cover;
       background-position: center;
@@ -44,12 +44,12 @@
 
     .window-controls {
       position: absolute;
-      top: 12px;  /* a bit of padding */
+      top: 12px;
       right: 12px;
       width: 82px;
       height: 16px;
       z-index: 2;
-      pointer-events: none; /* optional: makes it unclickable */
+      pointer-events: none;
     }
 
     .window-controls img {
@@ -57,8 +57,6 @@
       height: auto;
       image-rendering: pixelated;
     }
-
-
 
     .profile-card::before {
       content: "";
@@ -85,15 +83,9 @@
 
     .about-me-label {
       font-weight: bold;
-      margin-bottom: 0.2rem; /* or 0 if you want it tighter */
+      margin-bottom: 0.2rem;
     }
 
-    .about-me-label {
-      font-weight: bold;
-      margin-bottom: 0.2rem; /* or 0 if you want it tighter */
-    }
-
-    
     .profile-card > * {
       position: relative;
       z-index: 1;
@@ -200,7 +192,7 @@
   <div class="profile-card">
     <div class="gloss"></div>
     <div class="window-controls">
-        <img src="control.png" alt="window controls">
+      <img src="control.png" alt="window controls" />
     </div>
 
     <div class="profile-content">
@@ -219,11 +211,11 @@
           <button class="discord-btn" onclick="copyDiscord()">Discord: cronkle_v1</button>
         </div>
         <div class="about-me-label">About Me:</div>
-<div class="about-me-box">
-  <p class="about-me">
-    i'm a luau dev, learning C#, python and html. i've been interested in coding for abt 4 years (im 14) and am trying to learn environment design n other stuff i find fun ^_^ i absolutely adore aero shit, anything aero is beautiful to me.
-  </p>
-</div>
+        <div class="about-me-box">
+          <p class="about-me">
+            i'm a luau dev, learning C#, python and html. i've been interested in coding for abt 4 years (im 14) and am trying to learn environment design n other stuff i find fun ^_^ i absolutely adore aero shit, anything aero is beautiful to me.
+          </p>
+        </div>
         <div>heres some pong if ur bored : )</div>
       </div>
     </div>
