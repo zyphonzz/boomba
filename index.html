@@ -54,6 +54,18 @@
       overflow: hidden;
     }
 
+    .window-controls {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2; /* stays above gloss, etc */
+    }
+    
+    .window-controls img {
+      height: 32px;
+      image-rendering: pixelated;
+    }
+
     .profile-card::before {
       content: "";
       position: absolute;
